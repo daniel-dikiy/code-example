@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='de'>
+
+<head>
+    <title>
+        Fahrzeugklassifizierungsrechner | Raumnahme
+    </title>
+
+    <meta name='description' content='Fahrzeugklassifizierungsrechner | Raumnahme' charset='UTF-8'>
+    <meta name='author' content='Sternad Software GmbH, mein-onlinerechner.com'>
+    <meta name='copyright' content='Sternad Software GmbH, mein-onlinerechner.com'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    <link rel='preload' href='resources/css/app.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
+    <link rel='preload' href='resources/css/utils/bootstrap.min.css' as='style'
+        onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
+        <link rel='stylesheet' href='resources/css/app.css'>
+        <link rel='stylesheet' href='resources/css/utils/bootstrap.min.css'>
+    </noscript>
+</head>
+
+<body class='body'>
+    <form class='form-horizontal'>
+        <div class='content'>
+            <div class='form-inputs container-fluid pt-3 pb-3'>
+                <div class='row'>
+                    <div class='col-sm-3'>
+                        <div class='input-container'>
+                            <label for='model'>
+                                Mein Fahrzeug (Marke, Modell)
+                            </label>
+                            <input id='model' class='form-control'>
+                        </div>
+                    </div>
+                    <div class='col-sm-3'>
+                        <div class='input-container'>
+                            <label for='lange'>
+                                Länge in mm:
+                            </label>
+                            <input id='lange' class='inputcalc form-control' inputmode='numeric' required>
+                            <div id='langeMsg' class='invalid-message invalid-feedback'></div>
+                        </div>
+                    </div>
+                    <div class='col-sm-3'>
+                        <div class='input-container'>
+                            <label for='breite'>
+                                Breite mit Außenspiegeln in mm:
+                            </label>
+                            <input id='breite' class='inputcalc form-control' inputmode='numeric' required>
+                            <div id='breiteMsg' class='invalid-message invalid-feedback'></div>
+                        </div>
+                    </div>
+                    <div class='col-sm-3'>
+                        <div class='input-container'>
+                            <label for='höhe'>
+                                Höhe in mm:
+                            </label>
+                            <input id='höhe' class='inputcalc form-control' inputmode='numeric' required>
+                            <div id='höheMsg' class='invalid-message invalid-feedback'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='container-fluid pt-3'>
+                <div class='row center'>
+                    <div class='col-sm-4'>
+                        <button type='button' class='btn btn-custom' id='calculate'>
+                            G-Klasse ermitteln
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id='show-info'></div>
+        </div>
+    </form>
+    <script defer type='text/javascript' src='modules/html2canvas.min.js'></script>
+    <script defer type='text/javascript' src='modules/purify.min.js'></script>
+    <script defer type='text/javascript' src='modules/jspdf.umd.min.js'></script>
+    <script defer type='text/javascript' src='modules/jquery-3.6.4.min.js'></script>
+    <script defer type='text/javascript' src='modules/bootstrap.min.js'></script>
+    <script defer type='text/javascript' src='resources/js/main.js'></script>
+</body>
+
+</html>
